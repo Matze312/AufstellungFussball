@@ -14,22 +14,7 @@ int main()
     vector<string> starttor;
     starttor.push_back(tor[rand()%3]);
     vector<string> startabwehr;
-    int a;
-    int m;
-    int s;
-    int summe;
-    cout << "Geben Sie Ihre Wunschformation ein !" << endl;
-    cout << "Bedenken Sie aber das maximal 1 Torwart+ 10 weitere Feldspieler moeglich sind" << endl;
-    cout << "Geben Sie die Anzahl Ihrer Verteidiger ein" << endl;
-    cin >> a;
-    cout << "Geben Sie die Anzahl Ihrer Mittelfeldspieler ein" << endl;
-    cin >> m;
-    cout <<"Geben Sie Zuletzt die Anzahl Ihrer Angreifer ein" << endl;
-    cin >> s;
 
-    summe=a+m+s;
-    if(summe==10)
-    {
         while(starttor.size() <1)
         {
             starttor.push_back(tor[rand()%3]);
@@ -39,7 +24,7 @@ int main()
 
 
 
-        while(startabwehr.size() < a)
+        while(startabwehr.size() < 4)
         {
             startabwehr.push_back(abwehr[rand()%7]);
         }
@@ -52,7 +37,7 @@ int main()
         vector<string> startmittelfeld;
         startmittelfeld.push_back(mittelfeld[rand()%8]);
 
-        while(startmittelfeld.size() < m)
+        while(startmittelfeld.size() < 4)
         {
             startmittelfeld.push_back((mittelfeld[rand()%8]));
         }
@@ -62,7 +47,7 @@ int main()
         }
         vector<string> startsturm;
         startsturm.push_back(sturm[rand()%5]);
-        while(startsturm.size() < s)
+        while(startsturm.size() < 2)
         {
             startsturm.push_back(sturm[rand()%5]);
         }
@@ -70,11 +55,6 @@ int main()
         {
             cout << startsturm[i] << endl;
         }
-
-    }else
-    {
-        cout << "Bitte starten Sie ihr Programm neu" << endl;
-    }
 
 
     return 0;
